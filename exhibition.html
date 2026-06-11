@@ -95,10 +95,21 @@
       el.className = 'fingerprint';
       el.innerHTML = prints[Math.floor(Math.random() * prints.length)];
       const rotate = Math.random() * 360;
-      el.style.left = (e.pageX) + 'px';
-      el.style.top = (e.pageY) + 'px';
+
+      const container = e.target.closest('.col-images') || e.target.closest('.col-text');
+      if (container) {
+        const rect = container.getBoundingClientRect();
+        el.style.position = 'absolute';
+        el.style.left = (container.scrollLeft + e.clientX - rect.left) + 'px';
+        el.style.top = (container.scrollTop + e.clientY - rect.top) + 'px';
+        container.appendChild(el);
+      } else {
+        el.style.left = e.pageX + 'px';
+        el.style.top = e.pageY + 'px';
+        document.body.appendChild(el);
+      }
+
       el.style.transform = 'translate(-50%, -50%) rotate(' + rotate + 'deg)';
-      document.body.appendChild(el);
       setTimeout(() => el.remove(), 3000);
     });
   </script>
