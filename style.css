@@ -3,9 +3,9 @@
 
 /* ─── tokens ─────────────────────────────────────── */
 :root {
-  --bg: #0e0e0e;
-  --fg: #f0ede8;
-  --fg-dim: #888;
+  --bg: #f5f0e8;
+  --fg: #1a1a1a;
+  --fg-dim: #999;
   --font-sans: 'Noto Sans KR', sans-serif;
   --font-serif: 'Noto Serif KR', serif;
 }
@@ -37,7 +37,7 @@ a {
   justify-content: space-between;
   padding: 1.25rem 2rem;
   background: var(--bg);
-  border-bottom: 1px solid #1e1e1e;
+  border-bottom: 1px solid #d8d0c4;
   font-size: 0.75rem;
   letter-spacing: 0.08em;
 }
@@ -71,13 +71,13 @@ a {
 
 /* ─── image column (left) ─────────────────────────── */
 .col-images {
-  border-right: 1px solid #1e1e1e;
+  border-right: 1px solid #d8d0c4;
 }
 
 .img-block {
   width: 100%;
-  background: #181818;
-  border-bottom: 1px solid #1e1e1e;
+  background: #ede8df;
+  border-bottom: 1px solid #d8d0c4;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -165,10 +165,7 @@ a {
   color: var(--fg-dim);
   line-height: 1.8;
   padding-top: 1rem;
-  border-top: 1px solid #1e1e1e;
-}
-
-/* ─── exhibition placeholder ─────────────────────── */
+  border-top: 1px solid #d8d0c4; ─────────────────────── */
 .empty-state {
   padding: 6rem 2rem;
   color: var(--fg-dim);
@@ -202,7 +199,7 @@ a {
     position: static;
     height: auto;
     padding: 2rem 1.5rem 3rem;
-    border-top: 1px solid #1e1e1e;
+    border-top: 1px solid #d8d0c4;
   }
 
   .site-nav {
