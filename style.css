@@ -176,7 +176,7 @@ a {
 
 /* ─── fingerprint ────────────────────────────────── */
 .fingerprint {
-  position: fixed;
+  position: absolute;
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
