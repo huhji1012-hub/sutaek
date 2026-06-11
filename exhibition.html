@@ -95,8 +95,8 @@
       el.className = 'fingerprint';
       el.innerHTML = prints[Math.floor(Math.random() * prints.length)];
       const rotate = Math.random() * 360;
-      el.style.left = e.clientX + 'px';
-      el.style.top = e.clientY + 'px';
+      el.style.left = (e.pageX) + 'px';
+      el.style.top = (e.pageY) + 'px';
       el.style.transform = 'translate(-50%, -50%) rotate(' + rotate + 'deg)';
       document.body.appendChild(el);
       setTimeout(() => el.remove(), 3000);
