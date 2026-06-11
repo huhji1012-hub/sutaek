@@ -79,10 +79,24 @@
       el.className = 'fingerprint';
       el.innerHTML = prints[Math.floor(Math.random() * prints.length)];
       const rotate = Math.random() * 360;
-      el.style.left = (e.pageX) + 'px';
-      el.style.top = (e.pageY) + 'px';
+
+      // 클릭된 요소가 스크롤 컨테이너 안에 있으면 그 컨테이너 기준으로 계산
+      const container = e.target.closest('.col-images') || e.target.closest('.col-text');
+      if (container) {
+        const rect = container.getBoundingClientRect();
+        const x = e.clientX;
+        const y = e.clientY + container.scrollTop;
+        el.style.position = 'absolute';
+        el.style.left = (container.scrollLeft + e.clientX - rect.left) + 'px';
+        el.style.top = (container.scrollTop + e.clientY - rect.top) + 'px';
+        container.appendChild(el);
+      } else {
+        el.style.left = e.pageX + 'px';
+        el.style.top = e.pageY + 'px';
+        document.body.appendChild(el);
+      }
+
       el.style.transform = 'translate(-50%, -50%) rotate(' + rotate + 'deg)';
-      document.body.appendChild(el);
       setTimeout(() => el.remove(), 3000);
     });
   </script>
