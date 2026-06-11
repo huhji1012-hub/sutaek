@@ -4,7 +4,7 @@
 /* ─── tokens ─────────────────────────────────────── */
 :root {
   --bg: #f5f0e8;
-  --fg: #1a1a1a;
+  --fg: #000000;
   --fg-dim: #999;
   --font-sans: 'Noto Sans KR', sans-serif;
   --font-serif: 'Noto Serif KR', serif;
@@ -129,7 +129,7 @@ a {
 .text-body {
   font-size: 0.8rem;
   line-height: 1.9;
-  color: #c8c4be;
+  color: #000000;
 }
 
 .text-body p + p {
@@ -149,7 +149,7 @@ a {
   gap: 0.75rem;
   font-size: 0.75rem;
   line-height: 1.8;
-  color: #c8c4be;
+  color: #000000;
 }
 
 .vol-num {
